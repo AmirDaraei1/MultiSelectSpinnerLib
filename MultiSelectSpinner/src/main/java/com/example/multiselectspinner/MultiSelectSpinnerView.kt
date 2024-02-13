@@ -13,22 +13,22 @@ import android.widget.RelativeLayout
 class MultiSelectSpinnerView(context: Context, attrs: AttributeSet?) :
     androidx.appcompat.widget.AppCompatSpinner(context, attrs) {
 
-    private var headerSelectAll_text: String = "All"
-    private var footerConfirm_text: String = "OK"
-    private var placeholder_text: String = "Select Option"
+    private var headerSelectAll_text: String = "انتخاب همه"
+    private var footerConfirm_text: String = "تایید"
+    private var placeholder_text: String = "انتخاب پایانه"
     private var confirmTextColor: Int = 0
 
     init {
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.MultiSelectSpinnerView)
         headerSelectAll_text =
             typedArray.getString(R.styleable.MultiSelectSpinnerView_dropdown_headerSelectAll_text)
-                ?: "All"
+                ?: "انتخاب همه"
         footerConfirm_text =
             typedArray.getString(R.styleable.MultiSelectSpinnerView_dropdown_footerConfirm_text)
-                ?: "OK"
+                ?: "تایید"
         placeholder_text =
             typedArray.getString(R.styleable.MultiSelectSpinnerView_placeholder_text)
-                ?: "Select Option"
+                ?: "انتخاب پایانه"
         confirmTextColor = typedArray.getColor(
             R.styleable.MultiSelectSpinnerView_confirmTextColor,
             Color.GREEN
